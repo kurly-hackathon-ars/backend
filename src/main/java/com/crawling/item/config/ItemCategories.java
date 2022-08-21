@@ -1,7 +1,9 @@
 package com.crawling.item.config;
 
-import lombok.Getter;
+import lombok.NoArgsConstructor;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ItemCategories {
     private final String[][] ItemCategory = {
             {"100000100010008", "Cat100000100010008_MID", "스킨/로션/올인원"},
