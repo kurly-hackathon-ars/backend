@@ -32,7 +32,7 @@ public class DummyGeneratorContoller {
                 .id(RandomHelper.randomLong())
                 .name(RandomHelper.randomString())
                 .grade(grades[random.nextInt(grades.length)])
-                .createdDate(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .build();
 
         ProductInfoDto productInfo = ProductInfoDto.builder()

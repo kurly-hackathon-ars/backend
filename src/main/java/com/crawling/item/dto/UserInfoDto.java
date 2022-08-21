@@ -12,8 +12,9 @@ import java.time.LocalDateTime;
 public class UserInfoDto {
 
     private Long id;
+    private String memberId;
     private String name;
     private String grade;
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
 
 }
