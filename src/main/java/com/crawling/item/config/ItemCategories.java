@@ -1,6 +1,5 @@
 package com.crawling.item.config;
 
-import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
