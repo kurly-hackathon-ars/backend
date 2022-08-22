@@ -1,9 +1,10 @@
 package com.crawling.item.controller;
 
 import com.crawling.item.config.ItemLists;
+import com.crawling.item.dto.ActionDto;
 import com.crawling.item.dto.ProductInfoDto;
-import com.crawling.item.dto.PurchaseDto;
 import com.crawling.item.dto.MemberDto;
+import com.crawling.item.dto.enums.ActionType;
 import com.crawling.item.helper.RandomHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,10 +44,11 @@ public class DummyGeneratorContoller {
                 .category(products.get(randomInt).getCategory())
                 .build();
 
-        PurchaseDto purchaseDto = PurchaseDto.builder()
+        ActionDto actionDto = ActionDto.builder()
                 .id(RandomHelper.randomLong())
                 .userId(userInfoDto.getId())
                 .productId(productInfo.getId())
+                .actionType(ActionType.CART)
                 .createdDate(LocalDateTime.now())
                 .build();
 
@@ -54,7 +56,7 @@ public class DummyGeneratorContoller {
 
         System.out.println(userInfoDto.toString());
         System.out.println(productInfo.toString());
-        System.out.println(purchaseDto.toString());
+        System.out.println(actionDto.toString());
 
     }
 

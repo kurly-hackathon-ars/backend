@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://ars.comk6y2dtzgi.us-west-2.rds.amazonaws.com:3306/kurly
-    username: root
-    password: kurlyars2022!
+    username: root            #dummy
+    password: kurlyars2022!   #dummy
     driver-class-name: com.mysql.cj.jdbc.Driver
   kafka:
     consumer:
