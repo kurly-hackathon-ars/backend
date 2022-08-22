@@ -1,5 +1,6 @@
 package com.crawling.item.dto;
 
+import com.crawling.item.entity.Product;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.ToString;
@@ -16,7 +17,15 @@ public class ProductInfoDto {
     private String originPrice;         //상품 원가
     private String salePrice;           //상품 할인가
     private String category;            //상품 카테고리
-    private LocalDateTime insertDate;   //입고 일자
-    private int count;                  //재고 수
-    private boolean soldOut;            //재고 여부
+
+    public Product toProductEntity() {
+        return Product.builder()
+                .no(id)
+                .imgUrl(imgUrl)
+                .name(prodName)
+                .originPrice(originPrice != null ? Integer.parseInt(originPrice) : null)
+                .salePrice(salePrice != null ? Integer.parseInt(salePrice) : null)
+                .category(category)
+                .build();
+    }
 }

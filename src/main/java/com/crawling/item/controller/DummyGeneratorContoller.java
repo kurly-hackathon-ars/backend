@@ -41,9 +41,6 @@ public class DummyGeneratorContoller {
                 .originPrice(products.get(randomInt).getOriginPrice())
                 .salePrice(products.get(randomInt).getSalePrice())
                 .category(products.get(randomInt).getCategory())
-                .insertDate(LocalDateTime.now())
-                .count(RandomHelper.randomInt())
-                .soldOut(RandomHelper.randomBoolean())
                 .build();
 
         PurchaseDto purchaseDto = PurchaseDto.builder()
