@@ -16,9 +16,15 @@ public class MemberService {
     @Transactional
     public void createMember(MemberDto memberDto) {
 
-        Member member = memberDto.toMemberEntity();
+        Member members = memberDto.toMemberEntity();
 
-        memberRepository.save(member);
+        int cnt = memberRepository.countMemberByMemberId(members.getMemberId());
+
+        if (cnt > 0) {
+            return;
+        }
+
+        memberRepository.save(members);
 
     }
 
