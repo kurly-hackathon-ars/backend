@@ -3,7 +3,7 @@ package com.crawling.item.controller;
 import com.crawling.item.config.ItemLists;
 import com.crawling.item.dto.ProductInfoDto;
 import com.crawling.item.dto.PurchaseDto;
-import com.crawling.item.dto.UserInfoDto;
+import com.crawling.item.dto.MemberDto;
 import com.crawling.item.helper.RandomHelper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -28,11 +28,10 @@ public class DummyGeneratorContoller {
 
         int randomInt = RandomHelper.randomIntInListSize(products.size());
 
-        UserInfoDto userInfoDto = UserInfoDto.builder()
+        MemberDto userInfoDto = MemberDto.builder()
                 .id(RandomHelper.randomLong())
                 .name(RandomHelper.randomString())
                 .grade(grades[random.nextInt(grades.length)])
-                .createdAt(LocalDateTime.now())
                 .build();
 
         ProductInfoDto productInfo = ProductInfoDto.builder()
