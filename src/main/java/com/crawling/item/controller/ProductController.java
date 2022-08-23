@@ -15,9 +15,9 @@ public class ProductController {
     private final ProductService productService;
     private final DummyService dummyService;
 
-    @GetMapping("/recommends/{itemId}")
-    public Object getRecommendItems(@PathVariable Long itemId) {
-        return productService.getRecommendedProducts(itemId);
+    @GetMapping("/recommends")
+    public Object getRecommendItems() {
+        return productService.getRecommendedProducts();
     }
 
     //todo : db 저장 & kafka에 produce

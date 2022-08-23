@@ -14,9 +14,9 @@ public class ProductService {
 
     private final RestTemplate restTemplate;
 
-    public Object getRecommendedProducts(Long itemId) {
+    public Object getRecommendedProducts() {
 
-        String requestUrl = "http://3.37.151.144:8000/recommend_by_activity/"+itemId;
+        String requestUrl = "https://8eoluopi8h.execute-api.ap-northeast-2.amazonaws.com/recommend_by_activity";
         HttpHeaders headers = new HttpHeaders();
         HttpEntity<String> requestEntity = new HttpEntity<>(null, headers);
 
