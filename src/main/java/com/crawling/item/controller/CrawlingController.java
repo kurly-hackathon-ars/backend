@@ -55,8 +55,8 @@ public class CrawlingController {
                         .id(id)
                         .imgUrl(imgUrl)
                         .prodName(prodName)
-                        .originPrice(originPrice)
-                        .salePrice(salePrice)
+                        .originPrice(Integer.parseInt(originPrice))
+                        .salePrice(Integer.parseInt(salePrice))
                         .category(category[2])
                         .build().toProductEntity();
 
