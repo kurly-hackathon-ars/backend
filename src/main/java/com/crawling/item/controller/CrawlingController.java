@@ -4,7 +4,7 @@ import com.crawling.item.config.ItemCategories;
 import com.crawling.item.config.ItemLists;
 import com.crawling.item.dto.ProductInfoDto;
 import com.crawling.item.entity.Product;
-import com.crawling.item.repository.product.ProductRepository;
+import com.crawling.item.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

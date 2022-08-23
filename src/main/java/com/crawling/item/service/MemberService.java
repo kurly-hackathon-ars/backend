@@ -2,7 +2,7 @@ package com.crawling.item.service;
 
 import com.crawling.item.dto.MemberDto;
 import com.crawling.item.entity.Member;
-import com.crawling.item.repository.member.MemberRepository;
+import com.crawling.item.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

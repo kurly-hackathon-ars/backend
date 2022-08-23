@@ -1,4 +1,4 @@
-package com.crawling.item.repository.product;
+package com.crawling.item.repository;
 
 import com.crawling.item.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
